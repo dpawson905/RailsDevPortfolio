@@ -61,4 +61,4 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
-gem 'dj_copyright_tool', git: 'https://github.com/dpawson905/dj_copyright_tool'
+gem 'dj_copyright_tool'
