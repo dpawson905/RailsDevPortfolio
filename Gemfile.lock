@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/dpawson905/dj_copyright_tool
+  revision: c6169f397ba9b3b09645705c5b986dc228e0e2c4
+  specs:
+    dj_copyright_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -221,6 +227,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.6, >= 4.6.2)
+  dj_copyright_tool!
   friendly_id (~> 5.2, >= 5.2.5)
   jbuilder (~> 2.5)
   jquery-rails
