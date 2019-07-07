@@ -1,9 +1,29 @@
-<%= image_tag @portfolio_item.main_image %>
-<h1><%= @portfolio_item.title %></h1>
-<em><%= @portfolio_item.subtitle %></em>
-<p><%= @portfolio_item.body %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image, class: 'rounded img-fluid' %>
+      <div class="row p-4">
+        <div class="col text-center">
+          <% if logged_in?(:site_admin) %>
+            <%= link_to "Edit", edit_portfolio_path(@portfolio_item), class: 'btn btn-secondary' %>
+            <%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
+      <hr>
+      <em><%= @portfolio_item.subtitle %></em>
+      <p><%= @portfolio_item.body %></p>
+      <hr>
+      <h3> Technologies Used </h3>
+      <% @portfolio_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<h2> Technologies Used </h2>
-<% @portfolio_item.technologies.each do |t| %>
-  <p><%= t.name %></p>
-<% end %>
+
+
